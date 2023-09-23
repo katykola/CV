@@ -1,0 +1,300 @@
+:root{
+    --border-color:grey;
+    --tile-color:antiquewhite;
+    --item-color:lightseagreen;
+    --item-color-active:tomato;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #333;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.cv{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5rem;
+    background-color: lightblue;
+}
+
+@media only screen and (max-width: 450px) {
+    .cv{
+        padding: 4rem;
+    }
+  }
+
+/* Header */
+
+header{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 300px;
+    justify-items: center;
+    align-items: start;
+}
+
+.profile-photo{
+    width: 80%;
+    border-radius: 100%;
+    border: 3px solid var(--border-color);
+    position: relative;
+}
+
+
+@media only screen and (max-width: 768px) {
+    header{
+        grid-template-rows: 220px;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    header{
+        display: block;
+    }
+    .profile-photo{
+        position: static;
+        width: 100%;
+    }
+  }
+
+/* Tiles */
+
+.tiles{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.tile{
+    padding: 3rem;
+    background-color: var(--tile-color);
+}
+
+.tile:first-of-type{
+    padding: 0;   
+    background-color: inherit;
+}
+
+.tile-border{
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: 10px 15px var(--border-color);
+}
+
+.tile-about-me{
+    padding: 2rem;
+    background-color: var(--tile-color);
+    border-radius: 20px;
+}
+
+.heading-education{
+    padding-top: 7rem;
+}
+
+@media only screen and (max-width: 450px) {
+    .cv{
+      background-color: lightblue;
+    }
+    .tiles{
+        grid-template-columns: 100%;
+    }
+    .heading-education{
+        padding-top: 0;
+    }
+  }
+
+  @media only screen and (min-width: 451px) {
+    .tile-skill{
+        grid-row: 2/4;
+    }
+  }
+
+/* Typograhy */
+
+h1, h2{
+    text-transform: uppercase;
+}
+
+h2, h3{
+    font-family: 'Poller One', serif;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+h1{
+    justify-self: start;
+    align-self: end;
+    margin-bottom: 8rem;
+    font-size: 5.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    line-height: 1.5;
+    font-family: 'Bungee Shade', cursive;
+    background-color: aliceblue;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+h2{
+    font-size: 2.5rem;
+    padding-left: 2rem;
+    margin-bottom: 4rem;
+}
+
+h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: var(--item-color-active);
+}
+
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        margin-bottom: 1rem;
+    }
+    .heading-education{
+        padding-top: 4rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    h1{
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+        padding-left: 0;
+        margin: 2rem 0;
+        font-size: 1.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    h1{
+        font-size: 2.7rem;
+    }
+}
+
+  /* Skills, Progress Bars */
+
+  .skills{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .progress-bar{
+    width: 100%;
+    height: 1.5rem;
+    background-color: lightgray;
+  }
+
+  .progress-bar-active{
+      height: 1.5rem;
+      background-color: var(--item-color);
+    }
+
+    .progress-bar-active:hover{
+        background-color: var(--item-color-active);
+      }
+    
+    .progress-english{
+        width: 80%;
+  }
+
+  .progress-team{
+    width: 90%;
+}
+
+.progress-project{
+    width: 75%;
+}
+
+.progress-design{
+    width: 70%;
+}
+
+/*Contact*/
+
+.contact-heading{
+    margin-top: 3rem;
+}
+
+.contact-item{
+    padding-bottom: 1.5rem;
+}
+
+.material-icons{
+    color: var(--item-color);
+}
+
+.material-icons:hover{
+    color: var(--item-color-active);
+}
+
+.contact-icon{
+    vertical-align: bottom;
+    padding-right: 1rem;
+}
+
+/* Software Mastery */
+
+.software-mastery p{
+    margin: 3rem 0;
+}
+
+.software-mastery-percent{
+    background-color: var(--item-color);
+    padding: 1.2rem 1rem;
+    margin-right: 1rem;
+    border-radius: 100%;
+    color: white;
+    font-weight: 600;
+
+}
+
+.software-mastery-percent:hover{
+    background-color: var(--item-color-active);
+}
+
+/* Courses */
+
+ul{
+    padding-inline-start: 1.5rem;
+}
+
+li{
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+
+footer p{
+    margin-top: 5rem;
+    text-align: center;
+}
