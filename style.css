@@ -246,21 +246,18 @@ a:hover {
 }
 
 .contact-item {
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem;
 }
 
-.material-icons {
+i.material-icons {
   color: var(--item-color);
-  font-size: 30px;
+  font-size: 35px;
+  padding-right: 1rem;
+  vertical-align: middle;
 }
 
 .material-icons:hover {
   color: var(--item-color-active);
-}
-
-.contact-icon {
-  vertical-align: bottom;
-  padding-right: 1rem;
 }
 
 /* Software Mastery */
